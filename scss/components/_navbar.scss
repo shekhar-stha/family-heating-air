@@ -1,9 +1,9 @@
 nav {
     z-index: 2;
     width: 100%;
+    height: fit-content;
 
     @media (max-width: 1200px) {
-        background-color: rgb(92, 42, 120, 0.5);
         padding: 16px 0;
     }
 
@@ -26,6 +26,10 @@ nav {
             border-bottom: 1px solid transparent;
             transition: all 0.7s;
 
+            @media (max-width: 1400px) {
+                margin-right: 1rem;
+            }
+
             &:hover {
                 border-bottom: 4px solid $primary;
             }
@@ -47,19 +51,18 @@ nav {
     filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
 
     @media (max-width: 1400px) {
-        width: 14.5rem;
+        width: 17rem;
     }
 
     @media (max-width: 1200px) {
-        width: 100%;
+        width: 95%;
     }
 }
 
 .logo-section {
     @media (max-width: 1200px) {
-        width: 12rem;
+        width: 21rem;
         max-width: calc(100% - 65px);
-        position: relative;
         margin-bottom: -50px;
     }
 }

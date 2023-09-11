@@ -13040,10 +13040,10 @@ section {
 nav {
   z-index: 2;
   width: 100%;
+  height: fit-content;
 }
 @media (max-width: 1200px) {
   nav {
-    background-color: rgba(92, 42, 120, 0.5);
     padding: 16px 0;
   }
 }
@@ -13067,6 +13067,11 @@ nav .navbar-nav .nav-link {
   border-bottom: 1px solid transparent;
   transition: all 0.7s;
 }
+@media (max-width: 1400px) {
+  nav .navbar-nav .nav-link {
+    margin-right: 1rem;
+  }
+}
 nav .navbar-nav .nav-link:hover {
   border-bottom: 4px solid #d5ae31;
 }
@@ -13088,20 +13093,19 @@ nav .navbar-nav .nav-link:hover {
 }
 @media (max-width: 1400px) {
   .logo {
-    width: 14.5rem;
+    width: 17rem;
   }
 }
 @media (max-width: 1200px) {
   .logo {
-    width: 100%;
+    width: 95%;
   }
 }
 
 @media (max-width: 1200px) {
   .logo-section {
-    width: 12rem;
+    width: 21rem;
     max-width: calc(100% - 65px);
-    position: relative;
     margin-bottom: -50px;
   }
 }
@@ -13393,7 +13397,6 @@ nav .navbar-nav .nav-link:hover {
 @media (max-width: 1200px) {
   .nav-hero {
     height: auto;
-    min-height: 70vh;
   }
 }
 .nav-hero::after {
@@ -13412,15 +13415,15 @@ nav .navbar-nav .nav-link:hover {
   width: 100%;
   margin-top: 4rem;
 }
-@media (max-width: 1200px) {
-  .nav-hero .hero,
-  .nav-hero .inner-hero {
-    margin: 7rem 0 10rem;
-  }
-}
 .nav-hero .hero .hero-content,
 .nav-hero .inner-hero .hero-content {
   padding: 3rem 0rem 10rem;
+}
+@media (max-width: 1200px) {
+  .nav-hero .hero .hero-content,
+  .nav-hero .inner-hero .hero-content {
+    padding: 3rem 0rem 9rem;
+  }
 }
 .nav-hero .hero h1, .nav-hero .hero .h1,
 .nav-hero .inner-hero h1,
@@ -13436,6 +13439,24 @@ nav .navbar-nav .nav-link:hover {
   line-height: 60px;
   margin-bottom: 2.5rem;
 }
+@media (max-width: 768px) {
+  .nav-hero .hero h1, .nav-hero .hero .h1,
+  .nav-hero .inner-hero h1,
+  .nav-hero .inner-hero .h1 {
+    width: 100%;
+    padding: 0 0rem;
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .nav-hero .hero h1, .nav-hero .hero .h1,
+  .nav-hero .inner-hero h1,
+  .nav-hero .inner-hero .h1 {
+    font-size: 35px;
+    margin-bottom: 1rem;
+    line-height: inherit;
+  }
+}
 .nav-hero .hero .hero-info,
 .nav-hero .inner-hero .hero-info {
   width: 85%;
@@ -13445,6 +13466,13 @@ nav .navbar-nav .nav-link:hover {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 576px) {
+  .nav-hero .hero .hero-info,
+  .nav-hero .inner-hero .hero-info {
+    margin-top: 0.5rem;
+    width: 95%;
+  }
 }
 .nav-hero .hero-img {
   position: absolute;
@@ -13477,6 +13505,7 @@ nav .navbar-nav .nav-link:hover {
   .ratings-div .ratings-grid {
     grid-template-columns: repeat(1, 1fr);
     gap: 2.2rem;
+    width: 90%;
   }
 }
 .ratings-div .ratings-grid .ratings-card {
@@ -13530,13 +13559,29 @@ nav .navbar-nav .nav-link:hover {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 992px) {
+  .about-us .about-us-flex {
+    flex-direction: column;
+  }
+}
 .about-us .about-us-flex .info-div {
   width: 48%;
+}
+@media (max-width: 992px) {
+  .about-us .about-us-flex .info-div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .about-us .about-us-flex .img-div {
   width: 48%;
   height: 100%;
   position: relative;
+}
+@media (max-width: 992px) {
+  .about-us .about-us-flex .img-div {
+    width: 100%;
+  }
 }
 .about-us .about-us-flex .img-div img {
   width: 100%;
@@ -13667,6 +13712,11 @@ nav .navbar-nav .nav-link:hover {
   column-gap: 1rem;
   margin-top: 2rem;
   list-style-type: circle;
+}
+@media (max-width: 768px) {
+  .service-areas .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .service-areas .cities li {
   padding-bottom: 0.5rem;
