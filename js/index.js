@@ -647,7 +647,7 @@ $('.testimonial-slider').slick({
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
@@ -683,7 +683,7 @@ $(document).ready(function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var paragraphs = document.querySelectorAll(".testimonial-slider .data");
   paragraphs.forEach(function (paragraph) {
     var text = paragraph.textContent;
@@ -699,23 +699,25 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   function setEqualHeight(columns) {
+    if (window.innerWidth > 992) {
       var tallestColumn = 0;
-      columns.forEach(function(column) {
-          column.style.height = "auto";
-          var columnHeight = column.offsetHeight;
-          if (columnHeight > tallestColumn) {
-              tallestColumn = columnHeight;
-          }
+      columns.forEach(function (column) {
+        column.style.height = "auto";
+        var columnHeight = column.offsetHeight;
+        if (columnHeight > tallestColumn) {
+          tallestColumn = columnHeight;
+        }
       });
-      columns.forEach(function(column) {
-          column.style.height = tallestColumn + "px";
+      columns.forEach(function (column) {
+        column.style.height = tallestColumn + "px";
       });
+    }
   }
 
   var columns = document.querySelectorAll(".testimonial-slider .column");
   setEqualHeight(columns);
 
-  window.addEventListener("resize", function() {
-      setEqualHeight(columns);
+  window.addEventListener("resize", function () {
+    setEqualHeight(columns);
   });
 });
