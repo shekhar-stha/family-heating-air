@@ -112,9 +112,9 @@ $accent-color: #f5f5f5;
   transition: all 0.3s ease-in-out;
   user-select: none;
   font-size: 13px;
- }
- 
- .fancy::before {
+}
+
+.fancy::before {
   content: " ";
   width: 1.5625rem;
   height: 2px;
@@ -125,9 +125,9 @@ $accent-color: #f5f5f5;
   transform: translateY(-50%);
   transform-origin: center;
   transition: background 0.3s linear, width 0.3s linear;
- }
- 
- .fancy .text {
+}
+
+.fancy .text {
   font-size: 16px;
   line-height: 1.33333em;
   padding-left: 2em;
@@ -137,9 +137,9 @@ $accent-color: #f5f5f5;
   text-transform: uppercase;
   text-decoration: none;
   color: $primary-color;
- }
- 
- .fancy .top-key {
+}
+
+.fancy .top-key {
   height: 2px;
   width: 1.5625rem;
   top: -2px;
@@ -147,9 +147,9 @@ $accent-color: #f5f5f5;
   position: absolute;
   background: #e8e8e8;
   transition: width 0.5s ease-out, left 0.3s ease-out;
- }
- 
- .fancy .bottom-key-1 {
+}
+
+.fancy .bottom-key-1 {
   height: 2px;
   width: 1.5625rem;
   right: 1.875rem;
@@ -157,9 +157,9 @@ $accent-color: #f5f5f5;
   position: absolute;
   background: #e8e8e8;
   transition: width 0.5s ease-out, right 0.3s ease-out;
- }
- 
- .fancy .bottom-key-2 {
+}
+
+.fancy .bottom-key-2 {
   height: 2px;
   width: 0.625rem;
   right: 0.625rem;
@@ -167,30 +167,94 @@ $accent-color: #f5f5f5;
   position: absolute;
   background: #e8e8e8;
   transition: width 0.5s ease-out, right 0.3s ease-out;
- }
- 
- .fancy:hover {
+}
+
+.fancy:hover {
   color: white;
   background: $primary-color;
- }
- 
- .fancy:hover::before {
+}
+
+.fancy:hover::before {
   width: 0.9375rem;
   background: white;
- }
- 
- .fancy:hover .text {
+}
+
+.fancy:hover .text {
   color: white;
   padding-left: 1.5em;
- }
- 
- .fancy:hover .top-key {
+}
+
+.fancy:hover .top-key {
   left: -2px;
   width: 0px;
- }
- 
- .fancy:hover .bottom-key-1,
-  .fancy:hover .bottom-key-2 {
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
   right: 0;
   width: 0;
- }
+}
+
+//  Learn More
+.learn-more {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.learn-more:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: $success;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.learn-more span {
+  position: relative;
+  transition: all ease 0.5s;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: $dark;
+}
+
+.learn-more svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: $success;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.learn-more:hover:before {
+  width: 100%;
+  background: $primary-color;
+}
+
+.learn-more:hover span {
+  color: $white;
+}
+
+.learn-more:hover svg {
+  transform: translateX(0);
+  stroke: $white;
+
+}
+
+.learn-more:active {
+  transform: scale(0.95);
+}
