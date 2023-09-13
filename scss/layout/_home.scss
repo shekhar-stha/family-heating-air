@@ -26,6 +26,7 @@
     @media (max-width: 768px) {
         justify-content: center;
     }
+
     div {
         text-align: center;
         color: $white;
@@ -216,7 +217,7 @@
         }
 
         @media (max-width: 1200px) {
-        padding: 0 2rem;
+            padding: 0 2rem;
         }
 
         @media (max-width: 1200px) {
@@ -553,6 +554,7 @@
         }
     }
 }
+
 // Services Summary
 
 .services-summary {
@@ -614,6 +616,7 @@
         }
     }
 }
+
 // Call to Action
 .cta {
     position: relative;
@@ -650,20 +653,50 @@
 }
 
 // Appointment
-.appointment{
-    form{
+.appointment {
+    form {
         background-color: $white;
         padding: 2rem 1.5rem;
         border-radius: 12px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         margin: 2rem 0;
-        .flex{
+
+        .flex {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
 
             @media (max-width: 768px) {
                 grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
+
+// Before-After
+.flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img-div {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 35rem;
+            object-fit: cover;
+
+            @media (max-width: 768px) {
+                height: 20rem;
+            }
+
+            @media (max-width: 576px) {
+                height: 25rem;
             }
         }
     }
@@ -701,6 +734,37 @@ footer {
     }
 }
 
+// Single Testimonials
+.single-tesimonial {
+    background-color: #fcf9e7;
+
+    .testimonial {
+        padding: 4rem 0;
+
+        .img-div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            .quote {
+                width: 8rem;
+                margin: 0 auto;
+            }
+        }
+
+        .message {
+            font-size: 17px;
+            font-weight: 500;
+            color: $info;
+            margin-bottom: 2rem
+        }
+
+        .name {
+            font-size: 17px;
+            font-weight: 500;
+            color: $info;
+        }
+    }
+}
 
 // Contact
 .phone {
@@ -738,61 +802,60 @@ footer {
     background-color: rgb(0, 0, 0, 0.1);
 }
 
-    .flex-opposite {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+.flex-opposite {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    @media (max-width: 992px) {
+        flex-direction: column-reverse;
+    }
+
+    .img-div {
+        width: 40%;
+        position: relative;
+
+        @media (max-width: 1200px) {
+            width: 48%;
+        }
 
         @media (max-width: 992px) {
-            flex-direction: column-reverse;
+            width: 100%;
+            margin-top: 5rem;
         }
 
-        .img-div {
-            width: 40%;
-            position: relative;
-
-            @media (max-width: 1200px) {
-                width: 48%;
-            }
-
-            @media (max-width: 992px) {
-                width: 100%;
-                margin-top: 5rem;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background-color: $primary;
-                right: -5%;
-                top: -5%;
-                z-index: -1;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $primary;
+            right: -5%;
+            top: -5%;
+            z-index: -1;
         }
 
-        .info-div {
-            width: 58%;
-
-            @media (max-width: 1200px) {
-                width: 48%;
-            }
-
-            @media (max-width: 992px) {
-                width: 100%;
-            }
-
-            p {
-                font-size: 17px;
-                font-weight: 500;
-            }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
+    .info-div {
+        width: 58%;
+
+        @media (max-width: 1200px) {
+            width: 48%;
+        }
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+}
