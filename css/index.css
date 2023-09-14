@@ -13163,7 +13163,6 @@ nav .navbar-nav .nav-link:hover {
   .logo-section {
     width: 21rem;
     max-width: calc(100% - 65px);
-    margin-bottom: -50px;
   }
 }
 
@@ -13789,6 +13788,7 @@ nav .navbar-nav .nav-link:hover {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 12px;
   background-color: #fcfef7;
+  min-height: 320px;
 }
 .testimonials .testimonial-slider .column .quote {
   width: 4rem;
@@ -14151,6 +14151,9 @@ footer .footer-nav a {
 footer .footer-nav p {
   margin-bottom: 1rem;
 }
+footer .footer-nav svg {
+  color: #d5ae31;
+}
 
 .single-tesimonial {
   background-color: #fcf9e7;
@@ -14265,6 +14268,177 @@ footer .footer-nav p {
 .flex-opposite .info-div p {
   font-size: 17px;
   font-weight: 500;
+}
+
+.service-cities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style-type: none;
+}
+.service-cities li {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 auto;
+}
+.service-cities li::before {
+  font-family: "FontAwesome";
+  content: "\f3c5";
+  padding-right: 0.5rem;
+  color: rgb(207, 149, 49);
+}
+
+.brief-description .flex {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 4rem;
+}
+.brief-description .flex .unit {
+  width: 100%;
+}
+.brief-description .flex .unit .img-div {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.brief-description .flex .unit .img-div img {
+  width: 90%;
+  max-height: 280px;
+  object-fit: contain;
+}
+.brief-description .flex .unit table {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  padding: 1rem 0.8rem;
+}
+.brief-description .flex .unit table tr, .brief-description .flex .unit table td, .brief-description .flex .unit table th, .brief-description .flex .unit table thead, .brief-description .flex .unit table tbody {
+  border: none;
+}
+.brief-description .flex .unit table th {
+  border-bottom: 1px solid #808080;
+  font-weight: 600;
+  color: #a57715;
+  width: fit-content;
+}
+.brief-description .flex .unit table td {
+  font-weight: 500;
+  border-bottom: 1px solid #808080;
+  border-left: none !important;
+}
+.brief-description .flex .unit table th, .brief-description .flex .unit table td {
+  padding: 1rem;
+}
+.brief-description .flex .unit ul {
+  margin-top: 1.5rem;
+}
+
+.mass-reviews {
+  overflow: visible !important;
+  overflow-x: hidden;
+}
+.mass-reviews .review {
+  background-color: #fcfef7;
+  padding: 6rem 1rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 1rem 0 4rem;
+  position: relative;
+}
+.mass-reviews .review .comment {
+  font-size: 17px;
+  font-weight: 500;
+  color: #808080;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+.mass-reviews .review .name {
+  font-weight: 500;
+  color: #808080;
+}
+.mass-reviews .review .quote {
+  width: 8rem;
+  object-fit: contain;
+  position: absolute;
+  top: -20%;
+}
+@media (max-width: 576px) {
+  .mass-reviews .review .quote {
+    width: 6rem;
+    top: -10%;
+  }
+}
+.mass-reviews .review:nth-child(odd) .quote {
+  left: 5%;
+  transform: scale(-1);
+}
+.mass-reviews .review:nth-child(even) .quote {
+  right: 5%;
+}
+
+.contact .flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 0rem;
+}
+@media (max-width: 992px) {
+  .contact .flex {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+.contact .flex .info-section {
+  width: 30%;
+  background-color: #212529;
+  padding: 2rem 1.5rem;
+}
+@media (max-width: 1400px) {
+  .contact .flex .info-section {
+    width: 45%;
+  }
+}
+@media (max-width: 992px) {
+  .contact .flex .info-section {
+    width: 100%;
+  }
+}
+.contact .flex .info-section h4, .contact .flex .info-section .h4 {
+  color: rgb(207, 149, 49);
+  font-weight: 600;
+  font-size: 35px;
+  padding-bottom: 2rem;
+}
+.contact .flex .info-section .unit {
+  color: #fcfef7;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 2rem;
+}
+.contact .flex .info-section .unit i {
+  color: rgb(207, 149, 49);
+}
+.contact .flex .info-section .unit a {
+  color: #fcfef7;
+  text-decoration: underline !important;
+}
+.contact .flex .map-section {
+  width: 70%;
+}
+@media (max-width: 1400px) {
+  .contact .flex .map-section {
+    width: 55%;
+  }
+}
+@media (max-width: 992px) {
+  .contact .flex .map-section {
+    width: 100%;
+  }
+  .contact .flex .map-section iframe {
+    min-height: 20rem;
+  }
 }
 
 .lb-loader,

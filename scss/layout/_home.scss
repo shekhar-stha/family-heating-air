@@ -312,6 +312,7 @@
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             border-radius: 12px;
             background-color: $white;
+            min-height: 320px;
 
             .quote {
                 width: 4rem;
@@ -731,6 +732,10 @@ footer {
         p {
             margin-bottom: 1rem;
         }
+
+        svg {
+            color: $primary;
+        }
     }
 }
 
@@ -745,6 +750,7 @@ footer {
             display: flex;
             justify-content: center;
             margin-bottom: 2rem;
+
             .quote {
                 width: 8rem;
                 margin: 0 auto;
@@ -856,6 +862,25 @@ footer {
         p {
             font-size: 17px;
             font-weight: 500;
+        }
+    }
+}
+
+// Service Areas
+.service-cities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    list-style-type: none;
+    li {
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0 auto;
+        &::before {
+            font-family: "FontAwesome";
+            content: "\f3c5";
+            padding-right: 0.5rem;
+            color: $secondary;
         }
     }
 }

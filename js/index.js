@@ -669,8 +669,29 @@ window.addEventListener('load', function () {
       imgSection.style.height = `${infoHeight}px`;
     });
   }
-});
+}); 
+let showAll = true;
 
+function toggleReviews() {
+    showAll = !showAll;
+
+    const reviews = document.querySelectorAll('.review');
+    const showMoreBtn = document.querySelector('.show-more-btn');
+
+    reviews.forEach((review, index) => {
+        if (showAll || index < 10) {
+            review.style.display = 'block';
+        } else {
+            review.style.display = 'none';
+        }
+    });
+
+    if (showAll) {
+        showMoreBtn.textContent = 'Show Less';
+    } else {
+        showMoreBtn.textContent = 'Show All';
+    }
+}
 
 
 $(document).ready(function () {
@@ -684,6 +705,8 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  toggleReviews();
+
   var paragraphs = document.querySelectorAll(".testimonial-slider .data");
   paragraphs.forEach(function (paragraph) {
     var text = paragraph.textContent;
@@ -721,3 +744,4 @@ document.addEventListener("DOMContentLoaded", function () {
     setEqualHeight(columns);
   });
 });
+
