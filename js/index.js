@@ -705,7 +705,6 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  toggleReviews();
 
   var paragraphs = document.querySelectorAll(".testimonial-slider .data");
   paragraphs.forEach(function (paragraph) {
@@ -743,5 +742,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", function () {
     setEqualHeight(columns);
   });
+
+  toggleReviews();
 });
 
